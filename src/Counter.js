@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 
-export default class Counter extends Component {
-  render() {
+ function Counter ({display, increment}) {
+  
     return (
       <div className='counter'>
-        <span>{this.props.display}</span>
-        <button onClick={this.props.increment}>+</button>
+        <span>{display}</span>
+        <button onClick={increment}>+</button>
       </div>
     )
-  }
-}
+    }
+
+export default Counter

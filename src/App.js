@@ -1,34 +1,22 @@
-import React, {Component} from 'react'
+import React, {useState} from 'react'
 import Counter from './Counter'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props) 
-
-    this.state = {
-      count: 100
-      }
-      this.increment = this.increment.bind(this)
+function App () {
+  const [count, setCount] = useState(1)  
+      // this.increment = this.increment.bind(this)
+    
+    const increment = () => {
+      setCount(count + 1)
     }
 
-    increment (e) {
-      console.log('increment')
-      this.setState({
-        count:this.state.count + 1
-      })
-    }
-
-
-  render() {
   return (
     <div className="App">
       <Counter 
-        display={this.state.count} 
-        increment={this.increment}/>
-      
+        display={count} 
+        increment={() => {increment()}}/>      
     </div>
   );
 }
-}
+
 
 export default App;
