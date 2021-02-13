@@ -1,0 +1,22 @@
+body {
+  background-color: plum;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+button {
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
