@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Counter from './Counter'
 import './App.css'
+import Input from './Input'
 
 function App () {
  const [count, setCount] = useState(0)
@@ -19,6 +20,10 @@ const decrement = () => {
       display={count}
       decrement={decrement}
       increment={increment} />
+
+      <Input />
+     
+
     </div>
   );
 }

@@ -5,9 +5,9 @@ import './App.css'
   
     return (
       <div className='counter'>
-      <button onClick={decrement}>-</button>
+      <button className='count' onClick={decrement}>-</button>
         <h1>{display}</h1>
-        <button onClick={increment}>+</button>
+        <button className='count' onClick={increment}>+</button>
        </div>
     )
     }
