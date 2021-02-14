@@ -1,18 +1,8 @@
 import { render } from '@testing-library/react'
-import React, { useState } from 'react'
+import React from 'react'
 
-function Input () {
-  const [input, setInput] = useState('Visitor')
-   
-
-  const handleInput = e => {
-    setInput(e.target.value)
-  }
-
-  const handleClear = () => {
-    setInput('Visitor')
-  }
-
+function Input ({input, handleClear, handleInput}) {
+  
   return (
     <div>
       <div>Hello, {input}</div>
@@ -21,6 +11,7 @@ function Input () {
       />
       <button
       onClick={handleClear}>Clear</button>
+      
     </div>
   )
 }
